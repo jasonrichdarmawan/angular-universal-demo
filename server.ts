@@ -34,7 +34,13 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    if (req.headers['user-agent']?.includes('Googlebot')) {
+      // console.log('Googlebot and server side rendered HTML');
+      res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    } else {
+      // console.log('Browser and client side rendered HTML');
+      res.sendFile(join(distFolder, "index.html"));
+    }
   });
 
   return server;
