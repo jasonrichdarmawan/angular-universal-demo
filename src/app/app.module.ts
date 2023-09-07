@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 // import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+// import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 // import { HeroesComponent } from './heroes/heroes.component';
 // import { HeroSearchComponent } from './dashboard/hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -22,7 +22,7 @@ import { isPlatformBrowser } from '@angular/common';
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
+    // FormsModule,
     AppRoutingModule,
     HttpClientModule,
 
@@ -37,7 +37,7 @@ import { isPlatformBrowser } from '@angular/common';
     AppComponent,
     // DashboardComponent,
     // HeroesComponent,
-    HeroDetailComponent,
+    // HeroDetailComponent,
     MessagesComponent,
     // HeroSearchComponent
   ],
