@@ -12,12 +12,14 @@
     3. User can navigate to `/detail/13` immediately.
     4. SEO friendly. Crawler see `<a href="/detail/13">` and other tags.
 
+![Client Side Rendering](./README/Angular%20Universal-Client%20Side%20Rendering.drawio.png)
+
+![Server Side Rendering](./README/Angular%20Universal-Server%20Side%20Rendering.drawio.png)
+
 # Dynamic Rendering
 
 Only send server side rendered HTML if the User Agent is Googlebot.
 
 1. https://blog.adnanebrahimi.com/how-to-switch-between-angular-ssr-or-csr-based-on-detecting-user-agent
 
-![Client Side Rendering](./README/Angular%20Universal-Client%20Side%20Rendering.drawio.png)
-
-![Server Side Rendering](./README/Angular%20Universal-Server%20Side%20Rendering.drawio.png)
+![Dynamic Rendering](./README/Angular%20Universal-Dynamic%20Rendering.drawio.png)
