@@ -1,4 +1,11 @@
-# Summary
+# TODO
+
+- [x] Server side rendered HTML
+- [x] Dynamic Rendering
+- [ ] data requests `GET /api/**`
+- [ ] SSL
+
+# CSR vs SSR
 
 1. Client Side Rendered HTML
     1. **Slower** First Contentful Paint.
