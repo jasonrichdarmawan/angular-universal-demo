@@ -1,1 +1,17 @@
-![Angular Universal](./README/Angular%20Universal.drawio.png)
+# Summary
+
+1. Client Side Rendered HTML
+    1. **Slower** First Contentful Paint.
+        1. The `/` page will be blank for 1.1 min for slow 3G user (400 kbps).
+    2. Not SEO friendly. Crawler see a blank page.
+
+2. Server Side Rendered HTML
+    1. **Faster** First Contentful Paint.
+    2. Although FCP is faster, the page is not interactable (except navigating).
+        1. Slow 3G user (400 kbps) takes 16.47 before `Hero Search` is responsive.
+    3. User can navigate to `/detail/13` immediately.
+    4. SEO friendly. Crawler see `<a href="/detail/13">` and other tags.
+
+![Client Side Rendering](./README/Angular%20Universal-Client%20Side%20Rendering.drawio.png)
+
+![Server Side Rendering](./README/Angular%20Universal-Server%20Side%20Rendering.drawio.png)
