@@ -3,6 +3,7 @@ import { ServerModule } from '@angular/platform-server';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
+import { provideClientHydration } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
   ],
   providers: [
     // Add server-only providers here.
+    provideClientHydration()
   ],
   bootstrap: [AppComponent],
 })

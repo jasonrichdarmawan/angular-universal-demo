@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,9 +9,15 @@ import { HeroService } from '../hero.service';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
+  isBrowser: boolean
+
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(
+    @Inject(PLATFORM_ID) platformID: string,
+    private heroService: HeroService) {
+      this.isBrowser = isPlatformBrowser(platformID);
+    }
 
   ngOnInit() {
     this.getHeroes();
